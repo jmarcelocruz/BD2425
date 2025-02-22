@@ -1,0 +1,53 @@
+services:
+  gateway:
+    container_name: ${COMPOSE_PROJECT_NAME}-gateway
+    image: quay.io/coreos/etcd:v3.5.18
+    command: /usr/local/bin/etcd gateway start --endpoints=etcd0:2379,etcd1:2379,etcd2:2379 --listen-addr=0.0.0.0:23790
+    depends_on:
+    - ${COMPOSE_PROJECT_NAME}-etcd0
+    - ${COMPOSE_PROJECT_NAME}-etcd1
+    - ${COMPOSE_PROJECT_NAME}-etcd2
+    hostname: gateway
+    networks:
+    - etcd
+    ports:
+    - 23790:23790/tcp
+  etcd0:
+    container_name: ${COMPOSE_PROJECT_NAME}-etcd0
+    image: quay.io/coreos/etcd:v3.5.18
+    env_file:
+    - ./etcd.env
+    - ./etcd0.env
+    hostname: etcd0
+    networks:
+    - etcd
+    volumes:
+    - etcd0-data:/opt/data
+  etcd1:
+    container_name: ${COMPOSE_PROJECT_NAME}-etcd1
+    image: quay.io/coreos/etcd:v3.5.18
+    env_file:
+    - etcd.env
+    - etcd1.env
+    networks:
+    - etcd
+    volumes:
+    - etcd1-data:/opt/data
+  etcd2:
+    container_name: ${COMPOSE_PROJECT_NAME}-etcd2
+    image: quay.io/coreos/etcd:v3.5.18
+    env_file:
+    - etcd.env
+    - etcd2.env
+    networks:
+    - etcd
+    volumes:
+    - etcd2-data:/opt/data
+
+networks:
+  etcd:
+
+volumes:
+  etcd0-data:
+  etcd1-data:
+  etcd2-data:
