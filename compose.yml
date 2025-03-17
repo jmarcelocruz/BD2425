@@ -21,8 +21,6 @@ services:
     hostname: etcd0
     networks:
     - etcd
-    volumes:
-    - etcd0-data:/opt/data
   etcd1:
     container_name: ${COMPOSE_PROJECT_NAME}-etcd1
     image: quay.io/coreos/etcd:v3.5.18
@@ -31,8 +29,6 @@ services:
     - etcd1.env
     networks:
     - etcd
-    volumes:
-    - etcd1-data:/opt/data
   etcd2:
     container_name: ${COMPOSE_PROJECT_NAME}-etcd2
     image: quay.io/coreos/etcd:v3.5.18
@@ -41,13 +37,6 @@ services:
     - etcd2.env
     networks:
     - etcd
-    volumes:
-    - etcd2-data:/opt/data
 
 networks:
   etcd:
-
-volumes:
-  etcd0-data:
-  etcd1-data:
-  etcd2-data:
