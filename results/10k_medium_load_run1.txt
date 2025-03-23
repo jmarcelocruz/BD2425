@@ -1,0 +1,292 @@
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -B -pl site.ycsb:etcd3-binding -am package -DskipTests dependency:list -DoutputAbsoluteArtifactFilename -DappendOutput=false -DoutputFile=/tmp/tmp68033u9e'
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] YCSB Root                                                          [pom]
+[INFO] Core YCSB                                                          [jar]
+[INFO] Per Datastore Binding descriptor                                   [jar]
+[INFO] YCSB Datastore Binding Parent                                      [pom]
+[INFO] etcd v3 Binding                                                    [jar]
+[INFO] 
+[INFO] ---------------------------< site.ycsb:root >---------------------------
+[INFO] Building YCSB Root 0.18.0-SNAPSHOT                                 [1/5]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-maven) @ root ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.16:check (validate) @ root ---
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:list (default-cli) @ root ---
+[INFO] 
+[INFO] ---------------------------< site.ycsb:core >---------------------------
+[INFO] Building Core YCSB 0.18.0-SNAPSHOT                                 [2/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-maven) @ core ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.16:check (validate) @ core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 63 source files to /home/jmarcelocruz/Projects/YCSB/core/target/classes
+[INFO] /home/jmarcelocruz/Projects/YCSB/core/src/main/java/site/ycsb/DBFactory.java: Some input files use or override a deprecated API.
+[INFO] /home/jmarcelocruz/Projects/YCSB/core/src/main/java/site/ycsb/DBFactory.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/jmarcelocruz/Projects/YCSB/core/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ core ---
+[INFO] Building jar: /home/jmarcelocruz/Projects/YCSB/core/target/core-0.18.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:list (default-cli) @ core ---
+[INFO] 
+[INFO] --------------< site.ycsb:datastore-specific-descriptor >---------------
+[INFO] Building Per Datastore Binding descriptor 0.18.0-SNAPSHOT          [3/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-maven) @ datastore-specific-descriptor ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.16:check (validate) @ datastore-specific-descriptor ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ datastore-specific-descriptor ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ datastore-specific-descriptor ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ datastore-specific-descriptor ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/jmarcelocruz/Projects/YCSB/binding-parent/datastore-specific-descriptor/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ datastore-specific-descriptor ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ datastore-specific-descriptor ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ datastore-specific-descriptor ---
+[INFO] Building jar: /home/jmarcelocruz/Projects/YCSB/binding-parent/datastore-specific-descriptor/target/datastore-specific-descriptor-0.18.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:list (default-cli) @ datastore-specific-descriptor ---
+[INFO] 
+[INFO] ----------------------< site.ycsb:binding-parent >----------------------
+[INFO] Building YCSB Datastore Binding Parent 0.18.0-SNAPSHOT             [4/5]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-maven) @ binding-parent ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.16:check (validate) @ binding-parent ---
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy-dependencies (stage-dependencies) @ binding-parent ---
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:list (default-cli) @ binding-parent ---
+[INFO] 
+[INFO] ----------------------< site.ycsb:etcd3-binding >-----------------------
+[INFO] Building etcd v3 Binding 0.18.0-SNAPSHOT                           [5/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-maven) @ etcd3-binding ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.16:check (validate) @ etcd3-binding ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ etcd3-binding ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/jmarcelocruz/Projects/YCSB/etcd3/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ etcd3-binding ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/jmarcelocruz/Projects/YCSB/etcd3/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ etcd3-binding ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/jmarcelocruz/Projects/YCSB/etcd3/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ etcd3-binding ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ etcd3-binding ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ etcd3-binding ---
+[INFO] Building jar: /home/jmarcelocruz/Projects/YCSB/etcd3/target/etcd3-binding-0.18.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy-dependencies (stage-dependencies) @ etcd3-binding ---
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/netty/netty-codec-dns/4.1.118.Final/netty-codec-dns-4.1.118.Final.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/netty-codec-dns-4.1.118.Final.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/failureaccess-1.0.2.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/grpc/grpc-protobuf/1.70.0/grpc-protobuf-1.70.0.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/grpc-protobuf-1.70.0.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/etcd/jetcd-common/0.8.5/jetcd-common-0.8.5.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/jetcd-common-0.8.5.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/grpc/grpc-context/1.70.0/grpc-context-1.70.0.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/grpc-context-1.70.0.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/netty/netty-handler-proxy/4.1.110.Final/netty-handler-proxy-4.1.110.Final.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/netty-handler-proxy-4.1.110.Final.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/netty/netty-codec-socks/4.1.110.Final/netty-codec-socks-4.1.110.Final.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/netty-codec-socks-4.1.110.Final.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/grpc/grpc-util/1.70.0/grpc-util-1.70.0.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/grpc-util-1.70.0.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/netty/netty-resolver/4.1.118.Final/netty-resolver-4.1.118.Final.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/netty-resolver-4.1.118.Final.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.16.1/jackson-core-2.16.1.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/jackson-core-2.16.1.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/grpc/grpc-protobuf-lite/1.70.0/grpc-protobuf-lite-1.70.0.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/grpc-protobuf-lite-1.70.0.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.110.Final/netty-transport-native-unix-common-4.1.110.Final.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/netty-transport-native-unix-common-4.1.110.Final.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/grpc/grpc-stub/1.70.0/grpc-stub-1.70.0.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/grpc-stub-1.70.0.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/etcd/jetcd-core/0.8.5/jetcd-core-0.8.5.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/jetcd-core-0.8.5.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/grpc/grpc-grpclb/1.70.0/grpc-grpclb-1.70.0.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/grpc-grpclb-1.70.0.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/netty/netty-buffer/4.1.118.Final/netty-buffer-4.1.118.Final.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/netty-buffer-4.1.118.Final.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/javax.annotation-api-1.3.2.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/com/google/guava/guava/33.4.0-jre/guava-33.4.0-jre.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/guava-33.4.0-jre.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/etcd/jetcd-api/0.8.5/jetcd-api-0.8.5.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/jetcd-api-0.8.5.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/etcd/jetcd-grpc/0.8.5/jetcd-grpc-0.8.5.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/jetcd-grpc-0.8.5.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/vertx/vertx-core/4.5.13/vertx-core-4.5.13.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/vertx-core-4.5.13.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/com/google/protobuf/protobuf-java/3.25.5/protobuf-java-3.25.5.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/protobuf-java-3.25.5.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/grpc/grpc-core/1.70.0/grpc-core-1.70.0.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/grpc-core-1.70.0.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/slf4j-api-1.7.25.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/netty/netty-handler/4.1.118.Final/netty-handler-4.1.118.Final.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/netty-handler-4.1.118.Final.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/netty/netty-codec/4.1.110.Final/netty-codec-4.1.110.Final.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/netty-codec-4.1.110.Final.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/grpc/grpc-api/1.70.0/grpc-api-1.70.0.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/grpc-api-1.70.0.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/grpc/grpc-netty/1.70.0/grpc-netty-1.70.0.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/grpc-netty-1.70.0.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/vertx/vertx-grpc/4.5.13/vertx-grpc-4.5.13.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/vertx-grpc-4.5.13.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/netty/netty-codec-http2/4.1.110.Final/netty-codec-http2-4.1.110.Final.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/netty-codec-http2-4.1.110.Final.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/netty/netty-transport/4.1.118.Final/netty-transport-4.1.118.Final.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/netty-transport-4.1.118.Final.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/com/google/api/grpc/proto-google-common-protos/2.48.0/proto-google-common-protos-2.48.0.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/proto-google-common-protos-2.48.0.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/org/checkerframework/checker-qual/3.43.0/checker-qual-3.43.0.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/checker-qual-3.43.0.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/failsafe-3.3.2.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/netty/netty-resolver-dns/4.1.118.Final/netty-resolver-dns-4.1.118.Final.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/netty-resolver-dns-4.1.118.Final.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/netty/netty-codec-http/4.1.118.Final/netty-codec-http-4.1.118.Final.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/netty-codec-http-4.1.118.Final.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/com/google/protobuf/protobuf-java-util/3.25.5/protobuf-java-util-3.25.5.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/protobuf-java-util-3.25.5.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/netty/netty-common/4.1.118.Final/netty-common-4.1.118.Final.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/netty-common-4.1.118.Final.jar
+[INFO] Copying /home/jmarcelocruz/.m2/repository/io/perfmark/perfmark-api/0.27.0/perfmark-api-0.27.0.jar to /home/jmarcelocruz/Projects/YCSB/etcd3/target/dependency/perfmark-api-0.27.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.5:single (default) @ etcd3-binding ---
+[WARNING] The following patterns were never triggered in this artifact exclusion filter:
+o  '*:sources'
+
+[INFO] Building tar: /home/jmarcelocruz/Projects/YCSB/etcd3/target/ycsb-etcd3-binding-0.18.0-SNAPSHOT.tar.gz
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:list (default-cli) @ etcd3-binding ---
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for YCSB Root 0.18.0-SNAPSHOT:
+[INFO] 
+[INFO] YCSB Root .......................................... SUCCESS [  0.888 s]
+[INFO] Core YCSB .......................................... SUCCESS [  1.427 s]
+[INFO] Per Datastore Binding descriptor ................... SUCCESS [  0.096 s]
+[INFO] YCSB Datastore Binding Parent ...................... SUCCESS [  0.240 s]
+[INFO] etcd v3 Binding .................................... SUCCESS [  1.271 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.198 s
+[INFO] Finished at: 2025-03-22T19:25:36Z
+[INFO] ------------------------------------------------------------------------
+java -cp /home/jmarcelocruz/Projects/YCSB/etcd3/conf:/home/jmarcelocruz/Projects/YCSB/etcd3/target/etcd3-binding-0.18.0-SNAPSHOT.jar:/home/jmarcelocruz/.m2/repository/io/netty/netty-codec-dns/4.1.118.Final/netty-codec-dns-4.1.118.Final.jar:/home/jmarcelocruz/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/jmarcelocruz/.m2/repository/io/grpc/grpc-protobuf/1.70.0/grpc-protobuf-1.70.0.jar:/home/jmarcelocruz/.m2/repository/io/etcd/jetcd-common/0.8.5/jetcd-common-0.8.5.jar:/home/jmarcelocruz/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/jmarcelocruz/.m2/repository/io/grpc/grpc-context/1.70.0/grpc-context-1.70.0.jar:/home/jmarcelocruz/.m2/repository/io/netty/netty-handler-proxy/4.1.110.Final/netty-handler-proxy-4.1.110.Final.jar:/home/jmarcelocruz/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/home/jmarcelocruz/.m2/repository/io/netty/netty-codec-socks/4.1.110.Final/netty-codec-socks-4.1.110.Final.jar:/home/jmarcelocruz/.m2/repository/io/grpc/grpc-util/1.70.0/grpc-util-1.70.0.jar:/home/jmarcelocruz/Projects/YCSB/core/target/core-0.18.0-SNAPSHOT.jar:/home/jmarcelocruz/.m2/repository/io/netty/netty-resolver/4.1.118.Final/netty-resolver-4.1.118.Final.jar:/home/jmarcelocruz/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.16.1/jackson-core-2.16.1.jar:/home/jmarcelocruz/.m2/repository/io/grpc/grpc-protobuf-lite/1.70.0/grpc-protobuf-lite-1.70.0.jar:/home/jmarcelocruz/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/home/jmarcelocruz/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.110.Final/netty-transport-native-unix-common-4.1.110.Final.jar:/home/jmarcelocruz/.m2/repository/io/grpc/grpc-stub/1.70.0/grpc-stub-1.70.0.jar:/home/jmarcelocruz/.m2/repository/io/etcd/jetcd-core/0.8.5/jetcd-core-0.8.5.jar:/home/jmarcelocruz/.m2/repository/io/grpc/grpc-grpclb/1.70.0/grpc-grpclb-1.70.0.jar:/home/jmarcelocruz/.m2/repository/io/netty/netty-buffer/4.1.118.Final/netty-buffer-4.1.118.Final.jar:/home/jmarcelocruz/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/home/jmarcelocruz/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/home/jmarcelocruz/.m2/repository/com/google/guava/guava/33.4.0-jre/guava-33.4.0-jre.jar:/home/jmarcelocruz/.m2/repository/io/etcd/jetcd-api/0.8.5/jetcd-api-0.8.5.jar:/home/jmarcelocruz/.m2/repository/io/etcd/jetcd-grpc/0.8.5/jetcd-grpc-0.8.5.jar:/home/jmarcelocruz/.m2/repository/io/vertx/vertx-core/4.5.13/vertx-core-4.5.13.jar:/home/jmarcelocruz/.m2/repository/com/google/protobuf/protobuf-java/3.25.5/protobuf-java-3.25.5.jar:/home/jmarcelocruz/.m2/repository/io/grpc/grpc-core/1.70.0/grpc-core-1.70.0.jar:/home/jmarcelocruz/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/jmarcelocruz/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/home/jmarcelocruz/.m2/repository/io/netty/netty-handler/4.1.118.Final/netty-handler-4.1.118.Final.jar:/home/jmarcelocruz/.m2/repository/io/netty/netty-codec/4.1.110.Final/netty-codec-4.1.110.Final.jar:/home/jmarcelocruz/.m2/repository/io/grpc/grpc-api/1.70.0/grpc-api-1.70.0.jar:/home/jmarcelocruz/.m2/repository/io/grpc/grpc-netty/1.70.0/grpc-netty-1.70.0.jar:/home/jmarcelocruz/.m2/repository/io/vertx/vertx-grpc/4.5.13/vertx-grpc-4.5.13.jar:/home/jmarcelocruz/.m2/repository/io/netty/netty-codec-http2/4.1.110.Final/netty-codec-http2-4.1.110.Final.jar:/home/jmarcelocruz/.m2/repository/io/netty/netty-transport/4.1.118.Final/netty-transport-4.1.118.Final.jar:/home/jmarcelocruz/.m2/repository/com/google/api/grpc/proto-google-common-protos/2.48.0/proto-google-common-protos-2.48.0.jar:/home/jmarcelocruz/.m2/repository/org/checkerframework/checker-qual/3.43.0/checker-qual-3.43.0.jar:/home/jmarcelocruz/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/home/jmarcelocruz/.m2/repository/io/netty/netty-resolver-dns/4.1.118.Final/netty-resolver-dns-4.1.118.Final.jar:/home/jmarcelocruz/.m2/repository/io/netty/netty-codec-http/4.1.118.Final/netty-codec-http-4.1.118.Final.jar:/home/jmarcelocruz/.m2/repository/com/google/protobuf/protobuf-java-util/3.25.5/protobuf-java-util-3.25.5.jar:/home/jmarcelocruz/.m2/repository/io/netty/netty-common/4.1.118.Final/netty-common-4.1.118.Final.jar:/home/jmarcelocruz/.m2/repository/io/perfmark/perfmark-api/0.27.0/perfmark-api-0.27.0.jar site.ycsb.Client -db site.ycsb.db.etcd3.Etcd3Client -s -P workloads/workloada -p recordcount=10000 -p operationcount=10000 -load
+Command line: -db site.ycsb.db.etcd3.Etcd3Client -s -P workloads/workloada -p recordcount=10000 -p operationcount=10000 -load
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+2025-03-22 19:25:36:483 0 sec: 0 operations; est completion in 0 second 
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2025-03-22 19:25:46:456 10 sec: 169 operations; 16.9 current ops/sec; est completion in 9 minutes [INSERT: Count=169, Max=376063, Min=47520, Avg=58603.46, 90=61887, 99=126975, 99.9=376063, 99.99=376063] 
+2025-03-22 19:25:56:456 20 sec: 356 operations; 18.7 current ops/sec; est completion in 9 minutes [INSERT: Count=187, Max=63199, Min=45664, Avg=53629.35, 90=58783, 99=62495, 99.9=63199, 99.99=63199] 
+2025-03-22 19:26:06:456 30 sec: 541 operations; 18.5 current ops/sec; est completion in 8 minutes [INSERT: Count=185, Max=174079, Min=42144, Avg=54119.44, 90=59167, 99=112447, 99.9=174079, 99.99=174079] 
+2025-03-22 19:26:16:456 40 sec: 712 operations; 17.1 current ops/sec; est completion in 8 minutes [INSERT: Count=171, Max=142719, Min=45248, Avg=58461.57, 90=80063, 99=118399, 99.9=142719, 99.99=142719] 
+2025-03-22 19:26:26:456 50 sec: 875 operations; 16.3 current ops/sec; est completion in 8 minutes [INSERT: Count=163, Max=155135, Min=44416, Avg=60855.85, 90=86399, 99=129983, 99.9=155135, 99.99=155135] 
+2025-03-22 19:26:36:456 60 sec: 1028 operations; 15.3 current ops/sec; est completion in 8 minutes [INSERT: Count=153, Max=152319, Min=45280, Avg=65612.03, 90=101631, 99=143487, 99.9=152319, 99.99=152319] 
+2025-03-22 19:26:46:456 70 sec: 1187 operations; 15.9 current ops/sec; est completion in 8 minutes [INSERT: Count=159, Max=176895, Min=47136, Avg=62831.5, 90=83519, 99=134527, 99.9=176895, 99.99=176895] 
+2025-03-22 19:26:56:456 80 sec: 1340 operations; 15.3 current ops/sec; est completion in 8 minutes [INSERT: Count=153, Max=374015, Min=43040, Avg=65416.26, 90=86207, 99=157567, 99.9=374015, 99.99=374015] 
+2025-03-22 19:27:06:456 90 sec: 1493 operations; 15.3 current ops/sec; est completion in 8 minutes [INSERT: Count=153, Max=120895, Min=47424, Avg=65491.03, 90=99263, 99=120447, 99.9=120895, 99.99=120895] 
+2025-03-22 19:27:16:456 100 sec: 1648 operations; 15.5 current ops/sec; est completion in 8 minutes [INSERT: Count=155, Max=452863, Min=44096, Avg=64338.17, 90=84607, 99=188543, 99.9=452863, 99.99=452863] 
+2025-03-22 19:27:26:456 110 sec: 1801 operations; 15.3 current ops/sec; est completion in 8 minutes [INSERT: Count=153, Max=136447, Min=44480, Avg=65596.13, 90=99007, 99=131007, 99.9=136447, 99.99=136447] 
+2025-03-22 19:27:36:456 120 sec: 1951 operations; 15 current ops/sec; est completion in 8 minutes [INSERT: Count=150, Max=135295, Min=46304, Avg=66483.73, 90=102079, 99=131967, 99.9=135295, 99.99=135295] 
+2025-03-22 19:27:46:456 130 sec: 2090 operations; 13.9 current ops/sec; est completion in 8 minutes [INSERT: Count=139, Max=259583, Min=43488, Avg=72008.29, 90=111167, 99=250623, 99.9=259583, 99.99=259583] 
+2025-03-22 19:27:56:456 140 sec: 2232 operations; 14.2 current ops/sec; est completion in 8 minutes [INSERT: Count=142, Max=151807, Min=45632, Avg=70272.11, 90=107967, 99=129023, 99.9=151807, 99.99=151807] 
+2025-03-22 19:28:06:456 150 sec: 2375 operations; 14.3 current ops/sec; est completion in 8 minutes [INSERT: Count=143, Max=215807, Min=45984, Avg=70092.76, 90=96127, 99=165759, 99.9=215807, 99.99=215807] 
+2025-03-22 19:28:16:456 160 sec: 2525 operations; 15 current ops/sec; est completion in 7 minutes [INSERT: Count=150, Max=344575, Min=44992, Avg=66628.59, 90=90879, 99=137727, 99.9=344575, 99.99=344575] 
+2025-03-22 19:28:26:456 170 sec: 2676 operations; 15.1 current ops/sec; est completion in 7 minutes [INSERT: Count=151, Max=148095, Min=46528, Avg=66254.52, 90=93183, 99=125567, 99.9=148095, 99.99=148095] 
+2025-03-22 19:28:36:456 180 sec: 2826 operations; 15 current ops/sec; est completion in 7 minutes [INSERT: Count=150, Max=175871, Min=46496, Avg=66704.43, 90=94335, 99=119487, 99.9=175871, 99.99=175871] 
+2025-03-22 19:28:46:456 190 sec: 2964 operations; 13.8 current ops/sec; est completion in 7 minutes [INSERT: Count=138, Max=701439, Min=43904, Avg=72260.99, 90=98687, 99=581631, 99.9=701439, 99.99=701439] 
+2025-03-22 19:28:56:456 200 sec: 3065 operations; 10.1 current ops/sec; est completion in 7 minutes [INSERT: Count=101, Max=700415, Min=46688, Avg=93413.54, 90=115647, 99=637439, 99.9=700415, 99.99=700415] 
+2025-03-22 19:29:06:456 210 sec: 3204 operations; 13.9 current ops/sec; est completion in 7 minutes [INSERT: Count=139, Max=745983, Min=46432, Avg=75994.71, 90=94719, 99=700927, 99.9=745983, 99.99=745983] 
+2025-03-22 19:29:16:456 220 sec: 3354 operations; 15 current ops/sec; est completion in 7 minutes [INSERT: Count=150, Max=126143, Min=44288, Avg=66717.76, 90=95487, 99=121791, 99.9=126143, 99.99=126143] 
+2025-03-22 19:29:26:456 230 sec: 3504 operations; 15 current ops/sec; est completion in 7 minutes [INSERT: Count=150, Max=141183, Min=45920, Avg=66540.37, 90=87295, 99=126847, 99.9=141183, 99.99=141183] 
+2025-03-22 19:29:36:456 240 sec: 3658 operations; 15.4 current ops/sec; est completion in 6 minutes [INSERT: Count=154, Max=157439, Min=45248, Avg=64506.18, 90=97087, 99=131583, 99.9=157439, 99.99=157439] 
+2025-03-22 19:29:46:456 250 sec: 3812 operations; 15.4 current ops/sec; est completion in 6 minutes [INSERT: Count=154, Max=134527, Min=46176, Avg=65349.3, 90=99647, 99=129279, 99.9=134527, 99.99=134527] 
+2025-03-22 19:29:56:456 260 sec: 3962 operations; 15 current ops/sec; est completion in 6 minutes [INSERT: Count=150, Max=136447, Min=44928, Avg=66557.12, 90=98687, 99=132351, 99.9=136447, 99.99=136447] 
+2025-03-22 19:30:06:456 270 sec: 4115 operations; 15.3 current ops/sec; est completion in 6 minutes [INSERT: Count=153, Max=136063, Min=44288, Avg=65532.34, 90=108607, 99=125311, 99.9=136063, 99.99=136063] 
+2025-03-22 19:30:16:456 280 sec: 4263 operations; 14.8 current ops/sec; est completion in 6 minutes [INSERT: Count=148, Max=203391, Min=45056, Avg=67435.35, 90=93375, 99=148223, 99.9=203391, 99.99=203391] 
+2025-03-22 19:30:26:456 290 sec: 4385 operations; 12.2 current ops/sec; est completion in 6 minutes [INSERT: Count=122, Max=644095, Min=46016, Avg=79294.95, 90=113471, 99=634367, 99.9=644095, 99.99=644095] 
+2025-03-22 19:30:36:456 300 sec: 4488 operations; 10.3 current ops/sec; est completion in 6 minutes [INSERT: Count=103, Max=674815, Min=42624, Avg=100543.38, 90=130303, 99=660479, 99.9=674815, 99.99=674815] 
+2025-03-22 19:30:46:456 310 sec: 4649 operations; 16.1 current ops/sec; est completion in 5 minutes [INSERT: Count=161, Max=132351, Min=43808, Avg=61944.55, 90=91519, 99=125247, 99.9=132351, 99.99=132351] 
+2025-03-22 19:30:56:456 320 sec: 4806 operations; 15.7 current ops/sec; est completion in 5 minutes [INSERT: Count=157, Max=131583, Min=45312, Avg=63446.93, 90=92671, 99=129407, 99.9=131583, 99.99=131583] 
+2025-03-22 19:31:06:456 330 sec: 4961 operations; 15.5 current ops/sec; est completion in 5 minutes [INSERT: Count=155, Max=155135, Min=43040, Avg=64987.87, 90=94847, 99=122751, 99.9=155135, 99.99=155135] 
+2025-03-22 19:31:16:456 340 sec: 5110 operations; 14.9 current ops/sec; est completion in 5 minutes [INSERT: Count=149, Max=128255, Min=45056, Avg=67073.61, 90=98751, 99=127935, 99.9=128255, 99.99=128255] 
+2025-03-22 19:31:26:456 350 sec: 5259 operations; 14.9 current ops/sec; est completion in 5 minutes [INSERT: Count=149, Max=120639, Min=47296, Avg=67046.44, 90=102719, 99=116927, 99.9=120639, 99.99=120639] 
+2025-03-22 19:31:36:456 360 sec: 5378 operations; 11.9 current ops/sec; est completion in 5 minutes [INSERT: Count=119, Max=248063, Min=47168, Avg=83949.31, 90=137983, 99=199167, 99.9=248063, 99.99=248063] 
+2025-03-22 19:31:46:456 370 sec: 5517 operations; 13.9 current ops/sec; est completion in 5 minutes [INSERT: Count=139, Max=153343, Min=44800, Avg=71627.4, 90=112959, 99=141055, 99.9=153343, 99.99=153343] 
+2025-03-22 19:31:56:456 380 sec: 5667 operations; 15 current ops/sec; est completion in 4 minutes [INSERT: Count=150, Max=160255, Min=42272, Avg=66987.73, 90=98815, 99=133247, 99.9=160255, 99.99=160255] 
+2025-03-22 19:32:06:456 390 sec: 5815 operations; 14.8 current ops/sec; est completion in 4 minutes [INSERT: Count=148, Max=148351, Min=44032, Avg=67327.24, 90=106559, 99=145791, 99.9=148351, 99.99=148351] 
+2025-03-22 19:32:16:456 400 sec: 5963 operations; 14.8 current ops/sec; est completion in 4 minutes [INSERT: Count=148, Max=143359, Min=45824, Avg=67660, 90=103551, 99=130495, 99.9=143359, 99.99=143359] 
+2025-03-22 19:32:26:456 410 sec: 6117 operations; 15.4 current ops/sec; est completion in 4 minutes [INSERT: Count=154, Max=387583, Min=42432, Avg=64892.57, 90=96703, 99=133375, 99.9=387583, 99.99=387583] 
+2025-03-22 19:32:36:456 420 sec: 6268 operations; 15.1 current ops/sec; est completion in 4 minutes [INSERT: Count=151, Max=140031, Min=45376, Avg=66371.18, 90=95807, 99=132223, 99.9=140031, 99.99=140031] 
+2025-03-22 19:32:46:456 430 sec: 6414 operations; 14.6 current ops/sec; est completion in 4 minutes [INSERT: Count=146, Max=153471, Min=46720, Avg=68490.3, 90=112063, 99=144255, 99.9=153471, 99.99=153471] 
+2025-03-22 19:32:56:456 440 sec: 6570 operations; 15.6 current ops/sec; est completion in 3 minutes [INSERT: Count=156, Max=232703, Min=43424, Avg=63953.95, 90=94783, 99=148223, 99.9=232703, 99.99=232703] 
+2025-03-22 19:33:06:456 450 sec: 6710 operations; 14 current ops/sec; est completion in 3 minutes [INSERT: Count=140, Max=298751, Min=45760, Avg=71456.23, 90=105279, 99=178815, 99.9=298751, 99.99=298751] 
+2025-03-22 19:33:16:456 460 sec: 6843 operations; 13.3 current ops/sec; est completion in 3 minutes [INSERT: Count=133, Max=632831, Min=46240, Avg=75305.86, 90=114175, 99=476159, 99.9=632831, 99.99=632831] 
+2025-03-22 19:33:26:456 470 sec: 6967 operations; 12.4 current ops/sec; est completion in 3 minutes [INSERT: Count=124, Max=675839, Min=44096, Avg=79853.42, 90=111039, 99=674815, 99.9=675839, 99.99=675839] 
+2025-03-22 19:33:36:456 480 sec: 7084 operations; 11.7 current ops/sec; est completion in 3 minutes [INSERT: Count=117, Max=724991, Min=45888, Avg=86369.91, 90=116671, 99=639999, 99.9=724991, 99.99=724991] 
+2025-03-22 19:33:46:456 490 sec: 7215 operations; 13.1 current ops/sec; est completion in 3 minutes [INSERT: Count=131, Max=635903, Min=46336, Avg=76397.92, 90=116863, 99=431615, 99.9=635903, 99.99=635903] 
+2025-03-22 19:33:56:456 500 sec: 7366 operations; 15.1 current ops/sec; est completion in 2 minutes [INSERT: Count=151, Max=148351, Min=43168, Avg=65910.89, 90=104831, 99=134015, 99.9=148351, 99.99=148351] 
+2025-03-22 19:34:06:456 510 sec: 7514 operations; 14.8 current ops/sec; est completion in 2 minutes [INSERT: Count=148, Max=162687, Min=45696, Avg=67367.46, 90=97023, 99=150143, 99.9=162687, 99.99=162687] 
+2025-03-22 19:34:16:456 520 sec: 7665 operations; 15.1 current ops/sec; est completion in 2 minutes [INSERT: Count=151, Max=144383, Min=43776, Avg=66393.32, 90=103807, 99=135423, 99.9=144383, 99.99=144383] 
+2025-03-22 19:34:26:456 530 sec: 7816 operations; 15.1 current ops/sec; est completion in 2 minutes [INSERT: Count=151, Max=127103, Min=44768, Avg=66514.12, 90=108543, 99=124927, 99.9=127103, 99.99=127103] 
+2025-03-22 19:34:36:456 540 sec: 7966 operations; 15 current ops/sec; est completion in 2 minutes [INSERT: Count=150, Max=158719, Min=45792, Avg=66580.05, 90=108095, 99=136575, 99.9=158719, 99.99=158719] 
+2025-03-22 19:34:46:456 550 sec: 8118 operations; 15.2 current ops/sec; est completion in 2 minutes [INSERT: Count=152, Max=188159, Min=43296, Avg=65666.95, 90=102079, 99=161279, 99.9=188159, 99.99=188159] 
+2025-03-22 19:34:56:456 560 sec: 8273 operations; 15.5 current ops/sec; est completion in 1 minute [INSERT: Count=155, Max=175359, Min=44608, Avg=64690.58, 90=92095, 99=127551, 99.9=175359, 99.99=175359] 
+2025-03-22 19:35:06:456 570 sec: 8420 operations; 14.7 current ops/sec; est completion in 1 minute [INSERT: Count=147, Max=178175, Min=45280, Avg=67764.24, 90=109119, 99=155903, 99.9=178175, 99.99=178175] 
+2025-03-22 19:35:16:456 580 sec: 8581 operations; 16.1 current ops/sec; est completion in 1 minute [INSERT: Count=161, Max=129535, Min=44224, Avg=62219.23, 90=98111, 99=129407, 99.9=129535, 99.99=129535] 
+2025-03-22 19:35:26:456 590 sec: 8737 operations; 15.6 current ops/sec; est completion in 1 minute [INSERT: Count=156, Max=149887, Min=47456, Avg=64126.67, 90=92735, 99=140159, 99.9=149887, 99.99=149887] 
+2025-03-22 19:35:36:456 600 sec: 8882 operations; 14.5 current ops/sec; est completion in 1 minute [INSERT: Count=145, Max=454143, Min=44992, Avg=68963.64, 90=105855, 99=141823, 99.9=454143, 99.99=454143] 
+2025-03-22 19:35:46:456 610 sec: 9024 operations; 14.2 current ops/sec; est completion in 1 minute [INSERT: Count=142, Max=162815, Min=43008, Avg=70240.34, 90=110463, 99=162431, 99.9=162815, 99.99=162815] 
+2025-03-22 19:35:56:456 620 sec: 9177 operations; 15.3 current ops/sec; est completion in 56 seconds [INSERT: Count=153, Max=132095, Min=44896, Avg=65148.34, 90=106303, 99=125247, 99.9=132095, 99.99=132095] 
+2025-03-22 19:36:06:456 630 sec: 9332 operations; 15.5 current ops/sec; est completion in 46 seconds [INSERT: Count=155, Max=152831, Min=42400, Avg=64795.46, 90=91903, 99=132863, 99.9=152831, 99.99=152831] 
+2025-03-22 19:36:16:456 640 sec: 9478 operations; 14.6 current ops/sec; est completion in 36 seconds [INSERT: Count=146, Max=131711, Min=45024, Avg=68522.3, 90=94847, 99=127039, 99.9=131711, 99.99=131711] 
+2025-03-22 19:36:26:456 650 sec: 9633 operations; 15.5 current ops/sec; est completion in 25 seconds [INSERT: Count=155, Max=135039, Min=46048, Avg=64265.39, 90=91647, 99=133375, 99.9=135039, 99.99=135039] 
+2025-03-22 19:36:36:456 660 sec: 9787 operations; 15.4 current ops/sec; est completion in 15 seconds [INSERT: Count=154, Max=369151, Min=42656, Avg=65215.27, 90=98367, 99=168447, 99.9=369151, 99.99=369151] 
+2025-03-22 19:36:46:456 670 sec: 9935 operations; 14.8 current ops/sec; est completion in 5 second [INSERT: Count=148, Max=194175, Min=45312, Avg=67350.81, 90=97215, 99=132607, 99.9=194175, 99.99=194175] 
+2025-03-22 19:36:50:795 674 sec: 10000 operations; 14.98 current ops/sec; [CLEANUP: Count=1, Max=4119, Min=4116, Avg=4118, 90=4119, 99=4119, 99.9=4119, 99.99=4119] [INSERT: Count=65, Max=127039, Min=46592, Avg=67554.46, 90=106815, 99=127039, 99.9=127039, 99.99=127039] 
+[OVERALL], RunTime(ms), 674340
+[OVERALL], Throughput(ops/sec), 14.829314589079694
+[TOTAL_GCS_G1_Young_Generation], Count, 10
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 22
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.003262449209597532
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 10
+[TOTAL_GC_TIME], Time(ms), 22
+[TOTAL_GC_TIME_%], Time(%), 0.003262449209597532
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 4118.0
+[CLEANUP], MinLatency(us), 4116
+[CLEANUP], MaxLatency(us), 4119
+[CLEANUP], 95thPercentileLatency(us), 4119
+[CLEANUP], 99thPercentileLatency(us), 4119
+[INSERT], Operations, 10000
+[INSERT], AverageLatency(us), 67420.4912
+[INSERT], MinLatency(us), 42144
+[INSERT], MaxLatency(us), 745983
+[INSERT], 95thPercentileLatency(us), 115455
+[INSERT], 99thPercentileLatency(us), 148351
+[INSERT], Return=OK, 10000
