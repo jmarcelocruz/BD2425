@@ -1,10 +1,10 @@
 services:
-  etcd-small:
-    container_name: ${COMPOSE_PROJECT_NAME}-etcd-small
+  etcd:
+    container_name: ${COMPOSE_PROJECT_NAME}-etcd
     image: quay.io/coreos/etcd:v3.5.18
     command: /usr/local/bin/etcd --advertise-client-urls=http://0.0.0.0:2379 --listen-client-urls=http://0.0.0.0:2379
     cpus: 2
-    mem_limit: 4g
-    hostname: etcd-small
+    mem_limit: 8g
+    hostname: etcd
     ports:
       - 2379:2379
